@@ -598,6 +598,7 @@ background-color:  hsl(25, 98%, 40%);
 @media (max-width: 480px) {
   .main-container {
     max-width: 95%;
+    height: 85vh;
     margin: 0 auto; /* Center horizontally */
   }
 
