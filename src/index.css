@@ -482,6 +482,7 @@ background-color:  hsl(25, 98%, 40%);
   .result {
     right: 4%;
     font-size: 2.5rem;
+    overflow-x: auto;
   }
 
   .top-container {
@@ -605,11 +606,14 @@ background-color:  hsl(25, 98%, 40%);
   .screen1, .screen2, .screen3 {
     font-size: 2.2rem;
     height: 12vw;
+    overflow-x: auto;
   }
 
   .result {
-    right: 3%;
+
     font-size: 2.8rem;
+
+    left: 5%;
   }
 
   .top-container {

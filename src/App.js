@@ -56,7 +56,8 @@ function Topitems({ themeValue, setThemeValue }) {
 function Displayscreen({ output, themeValue }) {
   return (
     <div className={`screen${themeValue}`}>
-      <div className="result">{output}</div>
+      {console.log(output.length)}
+      <div className="result">{`${output}`}</div>
     </div>
   );
 }
