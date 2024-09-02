@@ -604,7 +604,7 @@ background-color:  hsl(25, 98%, 40%);
 
   .screen1, .screen2, .screen3 {
     font-size: 2.2rem;
-    height: 7rem;
+    height: 12vw;
   }
 
   .result {
@@ -616,6 +616,7 @@ background-color:  hsl(25, 98%, 40%);
     /* padding: 1.2rem; Increase size for smaller screens */
     font-size: 2rem; /* Further increase font size */
     box-sizing: border-box;
+    height: 10vh;
   }
   .theme-options{
     position: relative;
