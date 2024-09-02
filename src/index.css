@@ -4,7 +4,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  
+
 }
 .theme1{
   background-color: hsl(222, 26%, 31%);
@@ -581,7 +581,7 @@ background-color:  hsl(25, 98%, 40%);
     display: inline-block; /* Ensure inline-block for alignment */
     width: 3rem; /* Set fixed width for alignment */
     text-align: center; /* Center text inside each span */
-    font-size: 1.8rem; /* Increase font size */
+    font-size: 1.4rem; /* Increase font size */
   }
 
   .theme-value {
@@ -616,38 +616,39 @@ background-color:  hsl(25, 98%, 40%);
   }
   .slider-value {
 position: absolute;
-    left: 32%;
+left: 36%;
     gap: 1.4rem;
-    top: -100%;
+    top: -150%;
   }
   
   .range-btn1{
-    -webkit-appearance: none;
-    width: 60%;
     background: hsl(224, 36%, 15%);
+    -webkit-appearance: none;
+    width: 75%;
     outline: none;
     margin-left: 1.2rem;
     position: relative; /* Position relative to detect clicks */
     cursor: pointer;
     height: 1.5rem;
+    box-sizing: border-box;
+    border-radius: 50%;
   }
   .range-btn1::-webkit-slider-runnable-track {
-    width: 100%;
-    height: 15px;
     background: hsl(224, 36%, 15%);
-    border-radius: 50%;
+    width: 100%;
+    height: 2rem;
+    border-radius: 1rem;
    padding-left: 3px;
   }
   .range-btn1::-webkit-slider-thumb {
     -webkit-appearance: none; /* Remove default styling */
-    appearance: none;
-    width: 1rem; /* Thumb width */
-    height: 1rem; /* Thumb height */
     background: #ff5722; /* Thumb color */
+    appearance: none;
+    width: 1.5rem; /* Thumb width */
+    height: 1.5rem; /* Thumb height */
     cursor: pointer; /* Pointer cursor on hover */
     border-radius: 50%; 
-  /* margin: 0.4rem 0; */
-  margin-top: 0rem;
+  margin-top: 0.25rem;
   
     
   }
@@ -658,61 +659,65 @@ position: absolute;
   
   }
   .range-btn2{
-    -webkit-appearance: none;
-    width: 60%;
     background: hsl(35, 11%, 61%);
+    -webkit-appearance: none;
+    width: 75%;
     outline: none;
-    height: 1.5rem;
     margin-left: 1.2rem;
     position: relative; /* Position relative to detect clicks */
     cursor: pointer;
+    height: 1.5rem;
+    box-sizing: border-box;
+    border-radius: 50%;
   }
   .range-btn2::-webkit-slider-runnable-track {
 
-    width: 100%;
-    height: 15px;
     background: hsl(35, 11%, 61%);
-    border-radius: 50%;
-    
+    width: 100%;
+    height: 2rem;
+    border-radius: 1rem;
+  
   }
   .range-btn2::-webkit-slider-thumb {
     -webkit-appearance: none; /* Remove default styling */
-    appearance: none;
-    width: 1rem; /* Thumb width */
-    height: 1rem;/* Thumb height */
     background: hsl(25, 98%, 40%); /* Thumb color */
+    appearance: none;
+    width: 1.5rem; /* Thumb width */
+    height: 1.5rem; /* Thumb height */
     cursor: pointer; /* Pointer cursor on hover */
     border-radius: 50%; 
-margin: 0;
+  margin-top: 0.25rem;
   
   }
   
   .range-btn3{
-    -webkit-appearance: none;
-    width: 60%;
     background: hsl(268, 71%, 12%);
+    -webkit-appearance: none;
+    width: 75%;
     outline: none;
-    height: 1.5rem;
     margin-left: 1.2rem;
     position: relative; /* Position relative to detect clicks */
     cursor: pointer;
+    height: 1.5rem;
+    box-sizing: border-box;
+    border-radius: 50%;
   }
   .range-btn3::-webkit-slider-runnable-track {
-    width: 100%;
-    height: 15px;
     background: hsl(268, 71%, 12%);
-    border-radius: 50%;
-    padding-right: 3px;
+    width: 100%;
+    height: 2rem;
+    border-radius: 1rem;
+ 
   }
   .range-btn3::-webkit-slider-thumb {
     -webkit-appearance: none; /* Remove default styling */
-    appearance: none;
-    width: 1rem; /* Thumb width */
-    height: 1rem;/* Thumb height */
     background: hsl(176, 100%, 44%); /* Thumb color */
+    appearance: none;
+    width: 1.5rem; /* Thumb width */
+    height: 1.5rem; /* Thumb height */
     cursor: pointer; /* Pointer cursor on hover */
     border-radius: 50%; 
-    margin: 0;
+  margin-top: 0.25rem;
   
   }
   .slider-value-container {
