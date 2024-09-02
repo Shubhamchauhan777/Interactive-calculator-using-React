@@ -1,13 +1,707 @@
 body {
+  box-sizing: border-box;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  
+}
+.theme1{
+  background-color: hsl(222, 26%, 31%);
+  color: hsl(0, 0%, 100%);
+}
+.theme2{
+background-color: hsl(0, 0%, 90%);
+color:hsl(60, 10%, 19%)
+}
+.theme3{
+background-color: hsl(268, 75%, 9%);
+color: hsl(52, 100%, 62%);
+}
+.App{
+  display: grid;
+  place-content: center;
+  font-family: "League Spartan", sans-serif;
+  width: 100vw;
+  height: 100vh;
+  /* background-color: hsl(222, 26%, 31%);
+  color: hsl(0, 0%, 100%); */
+}
+.main-container{
+  display: flex;
+  flex-direction: column;
+  width: 25rem;
+  height: 30rem;
+}
+.top-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+ 
+}
+.top-theme-container{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+  right: -18%;
+}
+.top-theme-container span{
+ font-size: x-small;
+}
+.range-btn1{
+  -webkit-appearance: none;
+  width: 30%;
+  background: hsl(224, 36%, 15%);
+  outline: none;
+  border-radius: 50%;
+  margin-left: 1.2rem;
+  position: relative; /* Position relative to detect clicks */
+  cursor: pointer;
+}
+.range-btn1::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 15px;
+  background: hsl(224, 36%, 15%);
+  border-radius: 10px;
+ padding-left: 3px;
+}
+.range-btn1::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Remove default styling */
+  appearance: none;
+  width: 10px; /* Thumb width */
+  height: 10px; /* Thumb height */
+  background: #ff5722; /* Thumb color */
+  cursor: pointer; /* Pointer cursor on hover */
+  border-radius: 50%; 
+  margin-top: 2px; 
+
+}
+.range-btn1::-webkit-slider-thumb:hover {
+  -webkit-appearance: none; /* Remove default styling */
+  appearance: none;
+  background: hsl(27, 100%, 51%); /* Thumb color */
+
+}
+.range-btn2{
+  -webkit-appearance: none;
+  width: 30%;
+  background: hsl(224, 36%, 15%);
+  outline: none;
+  border-radius: 50%;
+  margin-left: 1.2rem;
+  position: relative; /* Position relative to detect clicks */
+  cursor: pointer;
+}
+.range-btn2::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 15px;
+  background: hsl(35, 11%, 61%);
+  border-radius: 10px;
+ 
+}
+.range-btn2::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Remove default styling */
+  appearance: none;
+  width: 10px; /* Thumb width */
+  height: 10px; /* Thumb height */
+  background: hsl(25, 98%, 40%); /* Thumb color */
+  cursor: pointer; /* Pointer cursor on hover */
+  border-radius: 50%; 
+  margin-top: 2px; 
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.range-btn3{
+  -webkit-appearance: none;
+  width: 30%;
+  background: hsl(224, 36%, 15%);
+  outline: none;
+  border-radius: 50%;
+  margin-left: 1.2rem;
+  position: relative; /* Position relative to detect clicks */
+  cursor: pointer;
+}
+.range-btn3::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 15px;
+  background: hsl(268, 71%, 12%);
+  border-radius: 10px;
+  padding-right: 3px;
+}
+.range-btn3::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Remove default styling */
+  appearance: none;
+  width: 10px; /* Thumb width */
+  height: 10px; /* Thumb height */
+  background: hsl(176, 100%, 44%); /* Thumb color */
+  cursor: pointer; /* Pointer cursor on hover */
+  border-radius: 50%; 
+  margin-top: 2px; 
+
+}
+.slider-value {
+  position: absolute;
+  top: -20px;
+  left: 40%;
+  transform: translateX(-50%);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  white-space: nowrap;
+  display: flex;
+  justify-content: space-between;
+  width: 2.4rem;
+}
+.screen1{
+  background-color:  hsl(224, 36%, 15%);
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 5rem;
+  border-radius: 0.5rem;
+  padding: 2.5rem 0rem;
+  overflow-x:auto;
+}
+.screen2{
+  background-color:  hsl(0, 0%, 93%);
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 5rem;
+  border-radius: 0.5rem;
+  padding: 2.5rem 0rem;
+  overflow-x:auto;
+}
+.screen3{
+  background-color:  hsl(268, 71%, 12%);
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 5rem;
+  border-radius: 0.5rem;
+  padding: 2.5rem 0rem;
+  overflow-x:auto;
+}
+.result{
+position: absolute;
+font-size: 2rem;
+right: 6%;
+font-weight: 600;
+white-space: nowrap; 
+}
+.dial-pad1{
+  display: grid;
+  padding: 1rem 1.2rem;
+  gap: 1.2rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  background-color: hsl(223, 31%, 20%);
+  margin-top: 1rem;
+  border-radius: 0.4rem;
+}
+.dial-pad2{
+  display: grid;
+  padding: 1rem 1.2rem;
+  gap: 1.2rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  background-color: hsl(0, 5%, 81%);
+  margin-top: 1rem;
+  border-radius: 0.4rem;
+}
+.dial-pad3{
+  display: grid;
+  padding: 1rem 1.2rem;
+  gap: 1.2rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  background-color:  hsl(268, 71%, 12%);
+  margin-top: 1rem;
+  border-radius: 0.4rem;
+}
+.num-btn1{
+  background-color: hsl(30, 25%, 89%);
+  color: hsl(221, 14%, 31%);
+  padding: 5px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: 700;
+  height: 3rem;
+  border-radius: 0.5rem;
+  outline: none;
+  border: none;
+  box-shadow: 0 3px 1px hsl(28, 16%, 65%);
+  transition: all 0.3s;
+}
+.num-btn1:hover{
+  background-color:hsl(0, 0%, 100%);
+ 
+}
+.num-btn2{
+  background-color:hsl(45, 7%, 89%);
+  color: hsl(60, 10%, 19%);
+  padding: 5px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: 700;
+  height: 3rem;
+  border-radius: 0.5rem;
+  outline: none;
+  border: 0px;
+  border: none;
+  box-shadow: 0 3px 1px hsl(35, 11%, 61%);
+  transition: all 0.3s;
+}
+.num-btn2:hover{
+  background-color:hsl(0, 0%, 100%);
+ 
+}
+.num-btn3{
+  background-color: hsl(281, 89%, 26%);
+  color: hsl(52, 100%, 62%);
+  padding: 5px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: 700;
+  height: 3rem;
+  border-radius: 0.5rem;
+  outline: none;
+  border: none;
+  box-shadow: 0 3px 1px hsl(285, 91%, 52%);
+  transition: all 0.3s;
+}
+.num-btn3:hover{
+  background-color:hsl(285, 96%, 32%);
+ 
+}
+.special-btn1{
+  background-color: hsl(225, 21%, 49%);
+  color: hsl(0, 0%, 100%);
+  padding: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  height: 3rem;
+  border-radius: 0.5rem;
+  outline: none;
+  border: none;
+  box-shadow: 0 3px 1px hsl(224, 28%, 35%);
+  transition: all 0.3s;
+  
+}
+.special-btn1:hover{
+  background-color:  hsl(223, 70%, 75%);
+}
+.special-btn2{
+  background-color: hsl(185, 42%, 37%);
+  color: hsl(0, 0%, 100%);
+  padding: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  height: 3rem;
+  border-radius: 0.5rem;
+  outline: none;
+  border: none;
+  box-shadow: 0 3px 1px  hsl(185, 58%, 25%);
+  transition: all 0.3s;
+}
+.special-btn2:hover{
+  background-color: hsl(185, 41%, 49%);
+}
+.special-btn3{
+  background-color: hsl(290, 70%, 36%);
+  color: hsl(0, 0%, 100%);
+  padding: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  height: 3rem;
+  border-radius: 0.5rem;
+  outline: none;
+  border: none;
+  box-shadow: 0 3px 1px hsl(285, 91%, 52%);
+  transition: all 0.3s;
+}
+.special-btn3:hover{
+  background-color: hsl(285, 91%, 43%)
+}
+.reset-btn1{
+  grid-column: span 2;
+  background-color: hsl(225, 21%, 49%);
+  color: hsl(0, 0%, 100%);
+  padding: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  height: 3rem;
+  border-radius: 0.5rem;
+  outline: none;
+  box-shadow: 0 3px 1px hsl(224, 28%, 35%);
+  transition: all 0.3s;
+  border: none;
+}
+.reset-btn1:hover{
+  background-color:  hsl(223, 70%, 75%);
+  
+}
+
+.reset-btn2{
+  grid-column: span 2;
+  background-color: hsl(185, 42%, 37%);
+  color: hsl(0, 0%, 100%);
+  padding: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  height: 3rem;
+  border-radius: 0.5rem;
+  outline: none;
+  box-shadow: 0 3px 1px  hsl(185, 58%, 25%);
+  border: none;
+  transition: all 0.3s;
+}
+.reset-btn2:hover{
+  background-color: hsl(185, 41%, 49%);
+}
+.reset-btn3{
+  grid-column: span 2;
+  background-color: hsl(290, 70%, 36%);
+  color: hsl(0, 0%, 100%);
+  padding: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  height: 3rem;
+  border-radius: 0.5rem;
+  outline: none;
+  box-shadow: 0 3px 1px hsl(285, 91%, 52%);
+  border: none;
+  transition: all 0.3s;
+}
+.reset-btn3:hover{
+  background-color: hsl(285, 91%, 43%)
+}
+.calculate-btn1{
+  grid-column: span 2;
+  background-color: hsl(6, 63%, 50%);
+  color: hsl(0, 0%, 100%);
+  padding: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  height: 3rem;
+  border-radius: 0.5rem;
+  outline: none;
+  box-shadow: 0 3px 1px  hsl(6, 70%, 34%);
+  border: none;
+  transition: all 0.3s;
+}
+.calculate-btn1:hover{
+background-color:  hsl(25, 98%, 40%);
+}
+.calculate-btn2{
+  grid-column: span 2;
+  background-color: hsl(25, 98%, 40%);
+  color: hsl(0, 0%, 100%);
+  padding: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  height: 3rem;
+  border-radius: 0.5rem;
+  outline: none;
+  box-shadow: 0 3px 1px hsl(25, 99%, 27%);
+  border: none;
+  transition: all 0.3s;
+}
+.calculate-btn2:hover{
+  background-color:  hsl(25, 87%, 55%);
+  }
+.calculate-btn3{
+  grid-column: span 2;
+  background-color: hsl(176, 100%, 44%);
+  color: hsl(198, 20%, 13%);
+  padding: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  height: 3rem;
+  border-radius: 0.5rem;
+  outline: none;
+  box-shadow: 0 3px 1px  hsl(177, 92%, 70%);
+  border: none;
+  transition: all 0.3s;
+}
+.calculate-btn3:hover{
+  background-color: hsl(177, 92%, 70%);
+
+}
+@media (max-width: 768px) {
+  /* Ensure responsive styles */
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+
+  .App {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 0 1rem; /* Add some padding to prevent overflow */
+  }
+
+  .main-container {
+    width: 100%;
+    max-width: 90%; /* Constrain width to prevent overflow */
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; /* Increased gap for spacing */
+    box-sizing: border-box;
+    overflow: hidden; /* Prevent overflow */
+    margin: 0 auto; /* Center horizontally */
+    padding: 1rem; /* Add padding inside the container */
+  }
+
+  .screen1, .screen2, .screen3 {
+    font-size: 2rem; /* Increase font size for screens */
+    height: 6rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .result {
+    right: 4%;
+    font-size: 2.5rem;
+  }
+
+  .top-container {
+    display: flex;
+    flex-direction: row; /* Ensure elements are on the same line */
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    font-size: 1.8rem; /* Increase font size for visibility */
+    width: 100%;
+  }
+
+  .top-theme-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%; /* Ensure it takes full width */
+    max-width: 30rem; /* Adjust width for mobile */
+  }
+
+  .range-btn1, .range-btn2, .range-btn3 {
+    -webkit-appearance: none;
+    width: 100%; /* Full width of container */
+    max-width: 8rem; /* Increase max width */
+    height: 1.2rem; /* Increase slider height */
+    background: hsl(224, 36%, 15%);
+    outline: none;
+    border-radius: 10px; /* Ensure round corners */
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    position: relative; /* Position relative for slider value positioning */
+  }
+
+  .range-btn1::-webkit-slider-runnable-track,
+  .range-btn2::-webkit-slider-runnable-track,
+  .range-btn3::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 1.2rem; /* Increase slider track height */
+    border-radius: 10px; /* Ensure round corners */
+    background: hsl(223, 36%, 25%); /* Match background for consistency */
+  }
+
+  .range-btn1::-webkit-slider-thumb,
+  .range-btn2::-webkit-slider-thumb,
+  .range-btn3::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 2rem; /* Increase thumb width */
+    height: 2rem; /* Increase thumb height */
+    background: #ff5722; /* Thumb color */
+    border-radius: 50%; /* Round thumb */
+    cursor: pointer;
+    margin-top: -0.5rem; /* Adjust thumb position */
+    border: 2px solid hsl(224, 36%, 15%); /* Add border for better visibility */
+  }
+
+  .range-btn1::-webkit-slider-thumb:hover,
+  .range-btn2::-webkit-slider-thumb:hover,
+  .range-btn3::-webkit-slider-thumb:hover {
+    background: hsl(25, 98%, 40%); /* Thumb color on hover */
+  }
+
+  .slider-value-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 8rem; /* Adjusted width for better visibility */
+    margin: 0 auto 1rem auto; /* Center container and add bottom margin */
+    font-size: 1.8rem; /* Increased font size for better visibility */
+    position: relative; /* Relative positioning to align with slider */
+    right: 5%; /* Adjust position from the right */
+  }
+
+  .slider-value {
+    position: absolute;
+    top: -2.5rem; /* Position above slider */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2.2rem; /* Increased size for better visibility */
+    text-align: center; /* Center-align values */
+  }
+
+  .slider-value span {
+    display: inline-block; /* Ensure inline-block for alignment */
+    width: 3rem; /* Set fixed width for alignment */
+    text-align: center; /* Center text inside each span */
+    font-size: 1.1rem; /* Increase font size */
+  }
+
+  .theme-value {
+    font-size: 2.2rem; /* Increased theme value size */
+    font-weight: bold;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-container {
+    max-width: 95%;
+    margin: 0 auto; /* Center horizontally */
+  }
+
+  .screen1, .screen2, .screen3 {
+    font-size: 2.2rem;
+    height: 7rem;
+  }
+
+  .result {
+    right: 3%;
+    font-size: 2.8rem;
+  }
+
+  .top-container {
+    /* padding: 1.2rem; Increase size for smaller screens */
+    font-size: 2rem; /* Further increase font size */
+  }
+  .theme-options{
+    position: relative;
+  }
+  .slider-value {
+position: absolute;
+    left: 32%;
+    gap: 1.4rem;
+    top: -100%;
+  }
+  
+  .range-btn1{
+    -webkit-appearance: none;
+    width: 60%;
+    background: hsl(224, 36%, 15%);
+    outline: none;
+    margin-left: 1.2rem;
+    position: relative; /* Position relative to detect clicks */
+    cursor: pointer;
+    height: 1.5rem;
+  }
+  .range-btn1::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 15px;
+    background: hsl(224, 36%, 15%);
+    border-radius: 50%;
+   padding-left: 3px;
+  }
+  .range-btn1::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Remove default styling */
+    appearance: none;
+    width: 1rem; /* Thumb width */
+    height: 1rem; /* Thumb height */
+    background: #ff5722; /* Thumb color */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 50%; 
+  /* margin: 0.4rem 0; */
+  margin-top: 0rem;
+  
+    
+  }
+  .range-btn1::-webkit-slider-thumb:hover {
+    -webkit-appearance: none; /* Remove default styling */
+    appearance: none;
+    background: hsl(27, 100%, 51%); /* Thumb color */
+  
+  }
+  .range-btn2{
+    -webkit-appearance: none;
+    width: 60%;
+    background: hsl(35, 11%, 61%);
+    outline: none;
+    height: 1.5rem;
+    margin-left: 1.2rem;
+    position: relative; /* Position relative to detect clicks */
+    cursor: pointer;
+  }
+  .range-btn2::-webkit-slider-runnable-track {
+
+    width: 100%;
+    height: 15px;
+    background: hsl(35, 11%, 61%);
+    border-radius: 50%;
+    
+  }
+  .range-btn2::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Remove default styling */
+    appearance: none;
+    width: 1rem; /* Thumb width */
+    height: 1rem;/* Thumb height */
+    background: hsl(25, 98%, 40%); /* Thumb color */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 50%; 
+margin: 0;
+  
+  }
+  
+  .range-btn3{
+    -webkit-appearance: none;
+    width: 60%;
+    background: hsl(224, 36%, 15%);
+    outline: none;
+    height: 1.5rem;
+    margin-left: 1.2rem;
+    position: relative; /* Position relative to detect clicks */
+    cursor: pointer;
+  }
+  .range-btn3::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 15px;
+    background: hsl(268, 71%, 12%);
+    border-radius: 50%;
+    padding-right: 3px;
+  }
+  .range-btn3::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Remove default styling */
+    appearance: none;
+    width: 1rem; /* Thumb width */
+    height: 1rem;/* Thumb height */
+    background: hsl(176, 100%, 44%); /* Thumb color */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 50%; 
+    margin: 0;
+  
+  }
+  .slider-value-container {
+    max-width: 12rem; /* Adjusted width for smaller screens */
+  }
+  .top-theme-container > span{
+    font-size: 1.1rem;
+  }
 }
